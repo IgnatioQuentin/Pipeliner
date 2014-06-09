@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
      <Compile Include="Assets\Scripts\GoldSpawner.cs" />
      <Compile Include="Assets\Scripts\JawController.cs" />
+     <Compile Include="Assets\Scripts\RandomGoldSpawnerByVector.cs" />
      <Compile Include="Assets\Scripts\SkopaRotator.cs" />
      <Compile Include="Assets\Scripts\TruckController.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
