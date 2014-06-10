@@ -47,10 +47,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
+     <Compile Include="Assets\Scripts\DestroyByCollision.cs" />
      <Compile Include="Assets\Scripts\GoldSpawner.cs" />
      <Compile Include="Assets\Scripts\JawController.cs" />
      <Compile Include="Assets\Scripts\RandomGoldSpawnerByVector.cs" />
      <Compile Include="Assets\Scripts\SkopaRotator.cs" />
+     <Compile Include="Assets\Scripts\TardScript.cs" />
      <Compile Include="Assets\Scripts\TruckController.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />

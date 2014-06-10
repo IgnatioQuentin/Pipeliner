@@ -5,7 +5,7 @@ public class RandomGoldSpawnerByVector : MonoBehaviour {
 
 	public GameObject gold;
 	public GameObject GoldSpawn;
-	public int spawnsPerSecond;
+	public int spawnGoldEverXthFrame;
 	public float forceX;
 	public float forceY;
 	public int forceMag;
@@ -19,7 +19,7 @@ public class RandomGoldSpawnerByVector : MonoBehaviour {
 	public GameObject terrain;
 	// Use this for initialization
 	void Start () {
-		cutOff = spawnsPerSecond * 60;
+		cutOff = spawnGoldEverXthFrame;
 		Random.Range(-3, 3);
 		randomOffsetX = Random.value;
 		randomOffsetY = Random.value;
