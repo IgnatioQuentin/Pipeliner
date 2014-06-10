@@ -7,15 +7,15 @@ public class TruckController : MonoBehaviour {
 	public float maxSpeed = 5f;			
 	//Flipping
 	private Transform flippedDetector;
-	//private bool flipped = false;
-	//private bool flipping = false;
+	public bool flipped = false;
+	private bool flipping = false;
 	//Menu
 	
 	void Awake()
 	{
 		// Setting up references.
-		//flippedDetector = transform.Find("FlippedDetector");
-		this.rigidbody2D.inertia = 0.001f;
+		flippedDetector = transform.Find("FlippedDetector");
+
 
 	}
 
@@ -24,8 +24,8 @@ public class TruckController : MonoBehaviour {
 	
 		
 	void Update() {
-	/*		
-				// The player is flipped if a linecast to the groundcheck position hits anything on the ground layer.
+			
+				//  player is flipped if a linecast to the groundcheck position hits anything on the ground layer.
 				flipped = Physics2D.Linecast (transform.position, flippedDetector.position, 1 << LayerMask.NameToLayer ("Terrain"));  
 
 				// If flipped, flip him over + mutex for flipping
@@ -33,7 +33,7 @@ public class TruckController : MonoBehaviour {
 						flipping = true;
 						StartCoroutine (flipOver ());
 				}
-*/
+
 				
 
 		}
@@ -50,10 +50,13 @@ public class TruckController : MonoBehaviour {
 
 // Custom methods
 	IEnumerator flipOver() {
+		Debug.Log ("I'm here");
 		yield return new WaitForSeconds (1.0f);
-		rigidbody2D.AddForce (new Vector2 (0f, 6000f));
-		transform.Rotate (0, 0, 120.0f);
-		//flipping = false;
+		rigidbody2D.AddForce (new Vector2 (0f, 40000f));
+		rigidbody2D.AddTorque (400f);
+		flipped = false;
+		yield return new WaitForSeconds (1.0f);
+		flipping = false;
 	}
 
 

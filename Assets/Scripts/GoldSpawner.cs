@@ -13,7 +13,6 @@ public class GoldSpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		Debug.Log ("Input: " + Input.mousePosition);
 	
 		if (Input.GetMouseButton(0)) {
 			Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
