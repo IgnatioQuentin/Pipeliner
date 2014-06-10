@@ -16,7 +16,6 @@ public class RandomGoldSpawnerByVector : MonoBehaviour {
 	private float randomOffsetX;
 	private float randomOffsetY;
 
-	public GameObject terrain;
 	// Use this for initialization
 	void Start () {
 		cutOff = spawnGoldEverXthFrame;

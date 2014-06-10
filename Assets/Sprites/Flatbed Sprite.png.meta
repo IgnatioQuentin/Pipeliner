@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d8df822ce8addf745b2d0f885fc0447d
+guid: 783b182032353344bbc7c7a40375e393
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -42,15 +42,45 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Flatbed_0
+    - name: Flatbed Wheel
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 100
-        height: 27
+        y: 29
+        width: 51
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Flatbed Chassi
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 37
+        width: 100
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Flatbed Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 0
+        width: 79
+        height: 27
+      alignment: 9
+      pivot: {x: .274231404, y: .312427193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Flatbed Hatch
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 6
+        width: 5
+        height: 22
+      alignment: 9
+      pivot: {x: .484040827, y: -.121941663}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
