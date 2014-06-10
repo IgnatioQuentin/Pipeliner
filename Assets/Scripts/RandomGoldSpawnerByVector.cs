@@ -20,14 +20,13 @@ public class RandomGoldSpawnerByVector : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		cutOff = spawnGoldEverXthFrame;
-		Random.Range(-3, 3);
-		randomOffsetX = Random.value;
-		randomOffsetY = Random.value;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(counter == 0){
+			randomOffsetX = Random.Range(-5, 30);
+			randomOffsetY = Random.Range(-5, 30);
 			GameObject spawn = (GameObject)Instantiate(gold, GoldSpawn.transform.position , Quaternion.identity);
 			spawn.rigidbody2D.AddForce(new Vector2(((forceX * forceMag) + randomOffsetX), ((forceY * forceMag) + randomOffsetY)));
 		}

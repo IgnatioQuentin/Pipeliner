@@ -48,7 +48,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
      <Compile Include="Assets\Scripts\DestroyByCollision.cs" />
+     <Compile Include="Assets\Scripts\FlatbedController.cs" />
      <Compile Include="Assets\Scripts\GoldSpawner.cs" />
+     <Compile Include="Assets\Scripts\InertiaCalculator.cs" />
+     <Compile Include="Assets\Scripts\InertiaCalculatorEditor.cs" />
      <Compile Include="Assets\Scripts\JawController.cs" />
      <Compile Include="Assets\Scripts\RandomGoldSpawnerByVector.cs" />
      <Compile Include="Assets\Scripts\SkopaRotator.cs" />

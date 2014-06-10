@@ -17,7 +17,7 @@ public class GoldSpawner : MonoBehaviour {
 	
 		if (Input.GetMouseButton(0)) {
 			Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			GameObject clone = (GameObject)Instantiate(gold, new Vector3 (target.x, target.y, 0f ), Quaternion.identity);
+			Instantiate(gold, new Vector3 (target.x, target.y, 0f ), Quaternion.identity);
 		}
 	}
 }
