@@ -9,7 +9,7 @@ public class goldShredder : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) {
-		if(other.gameObject.name.StartsWith("Gold")){
+		if(other.gameObject.name.Contains("Gold")){
 			Destroy(other.gameObject);
 		}
 	}

@@ -8,7 +8,7 @@ public class ScoreScript : MonoBehaviour {
 		logic = GetComponentInParent<GameLogic>();
 	}
 	void OnTriggerEnter2D(Collider2D other) {
-		if(other.gameObject.name.StartsWith("Gold")){
+		if(other.gameObject.name.Contains("Gold")){
 			logic.scoreOne();
 			Destroy(other.gameObject);
 		}
