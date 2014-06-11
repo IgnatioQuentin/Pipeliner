@@ -13,11 +13,11 @@ public class MoveOnTrigger : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D (Collider2D other) {
-		if (right && other.tag != "Kinematic") {
+		if (right && other.tag == "Gold") {
 			other.transform.Translate (moveForce * Time.deltaTime, 0, 0, Camera.main.transform);
 		}
 
-		if (left && other.tag != "Kinematic") {
+		if (left && other.tag == "Gold") {
 			other.transform.Translate (-moveForce * Time.deltaTime, 0, 0, Camera.main.transform);
 		}
 	}
