@@ -49,6 +49,8 @@
      <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
      <Compile Include="Assets\Scripts\DestroyByCollision.cs" />
      <Compile Include="Assets\Scripts\FlatbedController.cs" />
+     <Compile Include="Assets\Scripts\GameCamera.cs" />
+     <Compile Include="Assets\Scripts\GameLogic.cs" />
      <Compile Include="Assets\Scripts\GoldSpawner.cs" />
      <Compile Include="Assets\Scripts\HorizontalMovement.cs" />
      <Compile Include="Assets\Scripts\InertiaCalculator.cs" />
@@ -56,10 +58,11 @@
      <Compile Include="Assets\Scripts\JawController.cs" />
      <Compile Include="Assets\Scripts\MoveOnTrigger.cs" />
      <Compile Include="Assets\Scripts\RandomGoldSpawnerByVector.cs" />
+     <Compile Include="Assets\Scripts\ScoreScript.cs" />
      <Compile Include="Assets\Scripts\SkopaRotator.cs" />
-     <Compile Include="Assets\Scripts\TardScript.cs" />
      <Compile Include="Assets\Scripts\TruckController.cs" />
      <Compile Include="Assets\Scripts\XYMovement.cs" />
+     <Compile Include="Assets\Scripts\goldShredder.cs" />
      <Compile Include="Assets\Scripts\motorMovement.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
