@@ -26,9 +26,6 @@ public class FlatbedController : MonoBehaviour {
 			if (angle < maxAngle) {
 				angle++;
 				rotateClockwise ();
-			} else {
-				angle--;
-				rotateCounterClockwise();
 			}
 		}
 		
@@ -36,10 +33,6 @@ public class FlatbedController : MonoBehaviour {
 			if (angle > 0) {
 				angle--;
 				rotateCounterClockwise ();
-			} else {
-				angle++;
-				rotateClockwise ();
-				
 			}
 		}
 	}
