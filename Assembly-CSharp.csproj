@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\InertiaCalculator.cs" />
      <Compile Include="Assets\Scripts\InertiaCalculatorEditor.cs" />
      <Compile Include="Assets\Scripts\JawController.cs" />
+     <Compile Include="Assets\Scripts\MoveOnTrigger.cs" />
      <Compile Include="Assets\Scripts\RandomGoldSpawnerByVector.cs" />
      <Compile Include="Assets\Scripts\SkopaRotator.cs" />
      <Compile Include="Assets\Scripts\TardScript.cs" />
