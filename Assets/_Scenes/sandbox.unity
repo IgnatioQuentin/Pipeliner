@@ -374,12 +374,7 @@ GameObject:
   - 212: {fileID: 387984476}
   - 58: {fileID: 387984475}
   - 114: {fileID: 387984473}
-<<<<<<< HEAD
   m_Layer: 0
-=======
-  - 233: {fileID: 387984472}
-  m_Layer: 12
->>>>>>> 3ecd398f6c3dc3e3f8daf95a871bd93aa0292e6e
   m_Name: Rear Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -632,7 +627,7 @@ GameObject:
   - 50: {fileID: 591292713}
   - 114: {fileID: 591292716}
   - 114: {fileID: 591292715}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: FlatbedTruck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -677,7 +672,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 973587467}
   m_GameObject: {fileID: 591292712}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ead82db14dccaa488f09485184c341a, type: 3}
   m_Name: 
@@ -691,7 +686,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 973587467}
   m_GameObject: {fileID: 591292712}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca73ab3fcdbcbe246894aa51a29367f2, type: 3}
   m_Name: 
@@ -1411,12 +1406,7 @@ GameObject:
   - 212: {fileID: 981583212}
   - 58: {fileID: 981583211}
   - 114: {fileID: 981583209}
-<<<<<<< HEAD
   m_Layer: 0
-=======
-  - 233: {fileID: 981583208}
-  m_Layer: 12
->>>>>>> 3ecd398f6c3dc3e3f8daf95a871bd93aa0292e6e
   m_Name: Front Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1655,7 +1645,7 @@ GameObject:
   - 212: {fileID: 1220352097}
   - 114: {fileID: 1220352096}
   - 60: {fileID: 1220352095}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: Flatbed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1727,8 +1717,8 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 1078671183
-  m_SortingOrder: 2
+  m_SortingLayerID: 2288072887
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 783b182032353344bbc7c7a40375e393, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: .945098042}
 --- !u!1 &1327167397
@@ -2201,7 +2191,6 @@ SpriteRenderer:
   m_PrefabInternal: {fileID: 918425073}
   m_GameObject: {fileID: 1616593507}
   m_Enabled: 1
-<<<<<<< HEAD
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_LightmapIndex: 255
@@ -2218,34 +2207,6 @@ SpriteRenderer:
   m_Sprite: {fileID: 21300004, guid: 6c0c37b3c3fed3346933dce6c3701d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1616593513
-=======
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: .300000012
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 2.41780186
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_HDR: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: .0219999999
---- !u!4 &1547120297
->>>>>>> 3ecd398f6c3dc3e3f8daf95a871bd93aa0292e6e
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400004, guid: 894e19614e686de45be910b6d4540abb, type: 2}
@@ -2271,7 +2232,7 @@ GameObject:
   - 4: {fileID: 1678564203}
   - 212: {fileID: 1678564205}
   - 61: {fileID: 1678564204}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: Hatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2321,8 +2282,8 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 1078671183
-  m_SortingOrder: 3
+  m_SortingLayerID: 3217478859
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300006, guid: 783b182032353344bbc7c7a40375e393, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1689238754
