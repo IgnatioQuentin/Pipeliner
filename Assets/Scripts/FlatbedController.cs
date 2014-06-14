@@ -21,15 +21,15 @@ public class FlatbedController : MonoBehaviour {
 		hatch.transform.Rotate(0, 0, -5.0f);
 	}
 	
-	void handleAngle() {
-		if (Input.GetKey (KeyCode.W)) { 
+	public void handleInput(float v) {
+		if (v > 0f) { 
 			if (angle < maxAngle) {
 				angle++;
 				rotateClockwise ();
 			}
 		}
 		
-		if (Input.GetKey (KeyCode.S)) {
+		if (v < 0f) {
 			if (angle > 0) {
 				angle--;
 				rotateCounterClockwise ();
@@ -39,6 +39,5 @@ public class FlatbedController : MonoBehaviour {
 	
 	
 	void Update(){
-		handleAngle ();
 	}
 }

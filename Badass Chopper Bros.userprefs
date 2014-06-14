@@ -1,14 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\motorMovement.cs">
     <Files>
+      <File FileName="Assets\Scripts\motorMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameLogic.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\motorMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\XYMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\RayGold.cs" Line="13" Column="43" />
-      <File FileName="Assets\Scripts\RandomGoldSpawnerByVector.cs" Line="30" Column="4" />
-      <File FileName="Assets\Scripts\TruckController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\motorMovement.cs" Line="40" Column="35" />
-      <File FileName="Assets\Scripts\goldShredder.cs" Line="12" Column="38" />
-      <File FileName="Assets\Scripts\ScoreScript.cs" Line="10" Column="43" />
+      <File FileName="Assets\Scripts\inputRecording.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ScoreScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -13,5 +13,4 @@ public class ScoreScript : MonoBehaviour {
 			Destroy(other.gameObject);
 		}
 	}
-	
 }

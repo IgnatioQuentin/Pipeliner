@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\TruckController.cs" />
      <Compile Include="Assets\Scripts\XYMovement.cs" />
      <Compile Include="Assets\Scripts\goldShredder.cs" />
+     <Compile Include="Assets\Scripts\inputRecording.cs" />
      <Compile Include="Assets\Scripts\motorMovement.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />

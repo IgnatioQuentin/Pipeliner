@@ -5,6 +5,7 @@ public class GameCamera : MonoBehaviour {
 	private GameLogic logic;
 	private Transform target;
 	private float trackSpeed = 10;
+	private string guiString = "";
 	
 	void Start() {
 		logic = this.GetComponentInParent<GameLogic>();
@@ -17,13 +18,20 @@ public class GameCamera : MonoBehaviour {
 	// Track target
 	void LateUpdate() {
 		if (target) {
-			var v = transform.position;
+			Vector3 v = transform.position;
 			v.x = target.position.x;
+			v.y = target.position.y;
 			transform.position = Vector3.MoveTowards (transform.position, v, trackSpeed * Time.deltaTime);
 		}
 	}
 	void OnGUI () {
-		GUI.Box(new Rect(Screen.width/2,10,100,40), "Score: " + logic.getScore());
-
+		guiString = "Score: " + logic.getScore();
+		if(logic.getPlayback()){
+			guiString += "\n Playback";
+		}
+		if(logic.getRecording()){
+			guiString += "\n Recording";
+		}
+		GUI.Box(new Rect(Screen.width/2,10,100,40), guiString);
 	}
 }
