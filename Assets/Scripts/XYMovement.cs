@@ -12,7 +12,7 @@ public class XYMovement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	/*
+
 	void Update () {
 		float h = Input.GetAxis("Horizontal");
 		float v = Input.GetAxis ("Vertical");
@@ -28,10 +28,8 @@ public class XYMovement : MonoBehaviour {
 			//	rigidbody2D.velocity = new Vector2 (Mathf.Sign (rigidbody2D.velocity.y) * maxSpeed, rigidbody2D.velocity.x);
 
 	}
-	*/
-	void Update() {
 
-	}
+
 	public void handleInput(float h, float v) {
 		
 		if(h * rigidbody2D.velocity.x < maxSpeed) 			

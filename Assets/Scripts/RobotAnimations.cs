@@ -8,6 +8,7 @@ public class RobotAnimations : MonoBehaviour {
 	private HorizontalMovement movementScript;
 	private XYMovement headMovement;
 	public GameObject head;
+	public GameObject headParent;
 	private float velocityX;
 	private bool facingRight;
 	private Vector3 scale;
@@ -24,19 +25,20 @@ public class RobotAnimations : MonoBehaviour {
 			if (circleCollider == null) 
 				Debug.Log ("Failed to get CircleCollider2D in component Robot");
 		movementScript = GetComponent<HorizontalMovement> ();
-			if (movementScript = null)
+			if (movementScript == null)
 				Debug.Log ("Failed to get HorizontalMovement in component Robot");
-	}
 	
+	}
 	// Update is called once per frame
 	void Update () {
 		handleXMovement ();
 		if (Input.GetKeyDown (KeyCode.Space) && attached) {
 			movementScript = GetComponent<HorizontalMovement>();
 			movementScript.enabled = false;
-			headMovement = head.GetComponent<XYMovement>();
+			headMovement = head.GetComponentInParent<XYMovement>();
 			headMovement.enabled = true;
 			this.enabled = false;
+			rigidbody2D.fixedAngle = false;
 			StartCoroutine(detach());
 		}
 	}
@@ -47,10 +49,12 @@ public class RobotAnimations : MonoBehaviour {
 	//Custom Methods
 	public IEnumerator detach() {
 		attached = false;
+		circleCollider.enabled = false;
 		bodyAnim.SetBool ("packingUp", true);
 		yield return new WaitForSeconds (1f);
 		headAnim.SetBool ("detach", true);
-		circleCollider.enabled = false;
+		yield return new WaitForSeconds (1f);
+		headParent.rigidbody2D.isKinematic = false;
 
 	}
 
@@ -58,12 +62,13 @@ public class RobotAnimations : MonoBehaviour {
 		velocityX = rigidbody2D.velocity.x;
 		bodyAnim.SetFloat ("speed", Mathf.Abs(rigidbody2D.velocity.x));
 		
-		if (velocityX > 0 && facingRight) {
+		if (Input.GetKeyDown(KeyCode.D) && facingRight) {
 			flip();
 		}
-		if (velocityX < 0 && !facingRight) {
+		if (Input.GetKeyDown(KeyCode.A) && !facingRight) {
 			flip ();
 		}
+
 	}
 
 	void flip() {
