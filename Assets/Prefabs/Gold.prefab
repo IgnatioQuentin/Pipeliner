@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11400002}
   m_Layer: 8
   m_Name: Gold
-  m_TagString: Gold
+  m_TagString: MovableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

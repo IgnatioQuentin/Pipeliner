@@ -46,13 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GrabInTrigger.cs" />
      <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
      <Compile Include="Assets\Scripts\DestroyByCollision.cs" />
      <Compile Include="Assets\Scripts\FlatbedController.cs" />
      <Compile Include="Assets\Scripts\GameCamera.cs" />
      <Compile Include="Assets\Scripts\GameLogic.cs" />
      <Compile Include="Assets\Scripts\GoldSpawner.cs" />
+     <Compile Include="Assets\Scripts\GrabInTrigger.cs" />
      <Compile Include="Assets\Scripts\HorizontalMovement.cs" />
      <Compile Include="Assets\Scripts\InertiaCalculator.cs" />
      <Compile Include="Assets\Scripts\InertiaCalculatorEditor.cs" />
@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\MoveOnTrigger.cs" />
      <Compile Include="Assets\Scripts\RandomGoldSpawnerByVector.cs" />
      <Compile Include="Assets\Scripts\RayGold.cs" />
+     <Compile Include="Assets\Scripts\ReAttach.cs" />
      <Compile Include="Assets\Scripts\RobotAnimations.cs" />
      <Compile Include="Assets\Scripts\ScoreScript.cs" />
      <Compile Include="Assets\Scripts\SkopaRotator.cs" />

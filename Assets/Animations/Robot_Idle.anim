@@ -20,22 +20,22 @@ AnimationClip:
         value: {x: 0, y: -.271021843, z: 0}
         inSlope: {x: .027050972, y: .054101944, z: 0}
         outSlope: {x: .027050972, y: .054101944, z: 0}
-        tangentMode: 6
+        tangentMode: 0
       - time: .0500000007
         value: {x: .0013525486, y: -.268316746, z: 0}
         inSlope: {x: .0152254105, y: 0, z: 0}
         outSlope: {x: .0152254105, y: 0, z: 0}
-        tangentMode: 0
+        tangentMode: 88
       - time: .100000001
         value: {x: .00152254105, y: -.271021843, z: 0}
         inSlope: {x: -.00971913245, y: -.027050972, z: 0}
         outSlope: {x: -.00971913245, y: -.027050972, z: 0}
-        tangentMode: -1279215863
+        tangentMode: 0
       - time: .166666672
         value: {x: 0, y: -.271021843, z: 0}
         inSlope: {x: -.0228381138, y: 0, z: 0}
         outSlope: {x: -.0228381138, y: 0, z: 0}
-        tangentMode: 4
+        tangentMode: 6884
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Body
@@ -46,17 +46,17 @@ AnimationClip:
         value: {x: -.00193589926, y: -.19099021, z: 0}
         inSlope: {x: 0, y: -.107997537, z: 0}
         outSlope: {x: 0, y: -.107997537, z: 0}
-        tangentMode: 684720164
+        tangentMode: 0
       - time: .0833333358
         value: {x: -.00193589926, y: -.199990004, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 1232236404
+        tangentMode: 116643908
       - time: .166666672
         value: {x: -.00193589926, y: -.19099021, z: 0}
         inSlope: {x: 0, y: .107997537, z: 0}
         outSlope: {x: 0, y: .107997537, z: 0}
-        tangentMode: 0
+        tangentMode: 3
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: HeadSocket

@@ -1,9 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GrabInTrigger.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RobotAnimations.cs">
     <Files>
-      <File FileName="Assets\Scripts\XYMovement.cs" Line="86" Column="1" />
-      <File FileName="Assets\Scripts\RobotAnimations.cs" Line="30" Column="2" />
+      <File FileName="Assets\Scripts\RobotAnimations.cs" Line="61" Column="40" />
+      <File FileName="Assets\Scripts\GrabInTrigger.cs" Line="12" Column="1" />
+      <File FileName="Assets\Scripts\XYMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\RobotAnimations.cs" Line="93" Column="1" />
       <File FileName="Assets\Scripts\DestroyByBoundary.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\HorizontalMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\TruckController.cs" Line="1" Column="1" />
@@ -11,7 +13,7 @@
       <File FileName="Assets\Scripts\DestroyByCollision.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GameCamera.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\goldShredder.cs" Line="1" Column="1" />
-      <File FileName="Assets\GrabInTrigger.cs" Line="12" Column="95" />
+      <File FileName="Assets\Scripts\ReAttach.cs" Line="50" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

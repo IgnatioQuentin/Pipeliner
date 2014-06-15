@@ -9,10 +9,9 @@ public class RobotAnimations : MonoBehaviour {
 	private XYMovement headMovement;
 	public GameObject head;
 	public GameObject headParent;
-	private float velocityX;
 	private bool facingRight;
 	private Vector3 scale;
-	private bool attached = true;
+	public bool attached = true;
 	// Use this for initialization
 	void Start () {
 		bodyAnim = GetComponent<Animator> ();
@@ -27,7 +26,6 @@ public class RobotAnimations : MonoBehaviour {
 		movementScript = GetComponent<HorizontalMovement> ();
 			if (movementScript == null)
 				Debug.Log ("Failed to get HorizontalMovement in component Robot");
-	
 	}
 	// Update is called once per frame
 	void Update () {
@@ -48,18 +46,27 @@ public class RobotAnimations : MonoBehaviour {
 
 	//Custom Methods
 	public IEnumerator detach() {
-		attached = false;
+		// Activate head scripts
+		headParent.GetComponent<GrabInTrigger> ().enabled = true;
+		headParent.GetComponent<ReAttach> ().enabled = true;
+		// Activate head colliders
+		headParent.GetComponent<CircleCollider2D> ().enabled = true;
+		head.GetComponent<BoxCollider2D> ().enabled = true;
+		// Deactivate cirlceCollider
 		circleCollider.enabled = false;
 		bodyAnim.SetBool ("packingUp", true);
 		yield return new WaitForSeconds (1f);
+		attached = false;
 		headAnim.SetBool ("detach", true);
 		yield return new WaitForSeconds (1f);
+		head.GetComponent<CircleCollider2D> ().enabled = true;
 		headParent.rigidbody2D.isKinematic = false;
+		gameObject.layer = LayerMask.NameToLayer ("MovableObject");
+		gameObject.tag = "MovableObject";
 
 	}
 
 	void handleXMovement() {
-		velocityX = rigidbody2D.velocity.x;
 		bodyAnim.SetFloat ("speed", Mathf.Abs(rigidbody2D.velocity.x));
 		
 		if (Input.GetKeyDown(KeyCode.D) && facingRight) {
@@ -77,4 +84,9 @@ public class RobotAnimations : MonoBehaviour {
 		scale.x *= -1;
 		transform.localScale = scale;
 	}
+
+	public bool isAttached() {
+		return attached;
+	}
+	
 }
