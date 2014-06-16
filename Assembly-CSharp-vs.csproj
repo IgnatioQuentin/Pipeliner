@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\GoldSpawner.cs" />
      <Compile Include="Assets\Scripts\GrabInTrigger.cs" />
      <Compile Include="Assets\Scripts\HorizontalMovement.cs" />
+     <Compile Include="Assets\Scripts\HorizontalMovementB.cs" />
      <Compile Include="Assets\Scripts\InertiaCalculator.cs" />
      <Compile Include="Assets\Scripts\InertiaCalculatorEditor.cs" />
      <Compile Include="Assets\Scripts\JawController.cs" />
@@ -61,6 +62,7 @@
      <Compile Include="Assets\Scripts\RandomGoldSpawnerByVector.cs" />
      <Compile Include="Assets\Scripts\RayGold.cs" />
      <Compile Include="Assets\Scripts\ReAttach.cs" />
+     <Compile Include="Assets\Scripts\RoboHeadMovement.cs" />
      <Compile Include="Assets\Scripts\RobotAnimations.cs" />
      <Compile Include="Assets\Scripts\ScoreScript.cs" />
      <Compile Include="Assets\Scripts\SkopaRotator.cs" />

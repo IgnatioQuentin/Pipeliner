@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class ReAttach : MonoBehaviour {
+	public int player;
 	private RobotAnimations mainScript;
 	public GameObject body;
 	public GameObject chassis;
@@ -38,9 +39,15 @@ public class ReAttach : MonoBehaviour {
 	
 	void OnTriggerStay2D(Collider2D other) {
 		if (Input.GetKeyDown (KeyCode.Space) 
-		    	&& other.name == ("Robot")) {
+		    	&& other.name == ("Red Bot")
+		    		&& player == 1) {
 			StartCoroutine(reAttach ());
 		}
+		if (Input.GetKeyDown (KeyCode.KeypadPlus)
+				&& other.name == ("Blue Bot")
+					&& player == 2) {
+			StartCoroutine (reAttach ());
+				}
 	}
 
 	// Custom Methods
@@ -63,8 +70,8 @@ public class ReAttach : MonoBehaviour {
 		headCircleCollider.enabled = false;
 		chassisCircleCollider.enabled = false;
 		// Deactivate current scripts
-		gameObject.GetComponent<XYMovement>().enabled = false;
-		gameObject.GetComponent<GrabInTrigger>().enabled = false;
+		this.GetComponent<RoboHeadMovement>().enabled = false;
+		chassis.GetComponent<GrabInTrigger>().enabled = false;
 		// Activate fixed angle on body
 		body.rigidbody2D.fixedAngle = true;
 		//Animate
@@ -73,6 +80,7 @@ public class ReAttach : MonoBehaviour {
 		rigidbody2D.isKinematic = true;
 		transform.localPosition = new Vector3 (1.819692f, -0.7440035f);
 		// Final wrapping up
+		body.tag = ("Player");
 		yield return new WaitForSeconds (1f);
 		mainScript.attached = true;
 		enabled = false;

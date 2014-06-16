@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class GrabInTrigger : MonoBehaviour {
+	public int player;
 	private bool holding = false;
 	private Animator anim;
 	private HingeJoint2D joint;
@@ -10,17 +11,30 @@ public class GrabInTrigger : MonoBehaviour {
 		anim = GetComponentInChildren<Animator> ();
 		if (anim == null)
 			Debug.Log ("Couldn't get Animator from child");
-		joint = GetComponent<HingeJoint2D> ();
+		joint = GetComponentInParent<HingeJoint2D> ();
 		if (joint == null) 
 			Debug.Log ("Couldn't load SpringJoint2D");
 
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
-			if (Input.GetKeyDown(KeyCode.E) && 
-		    		(other.tag == "MovableObject")
-		    			&& !holding) {
-			Rigidbody2D otherBody = other.GetComponent<Rigidbody2D>();
+		//Player 1
+		if (Input.GetKeyDown (KeyCode.E) && (other.tag == "MovableObject") && !holding && player == 1) {
+				Rigidbody2D otherBody = other.GetComponent<Rigidbody2D> ();
+				grab (otherBody);
+		}
+		if (Input.GetKeyDown (KeyCode.R) && holding && player == 1) 
+				release ();
+		//Player 2
+		if (Input.GetKeyDown (KeyCode.Keypad8) && (other.tag == "MovableObject") && !holding && player == 2) {		
+				Rigidbody2D otherBody = other.GetComponent<Rigidbody2D> ();	
+				grab (otherBody);
+		}
+		if (Input.GetKeyDown (KeyCode.Keypad9) && holding && player == 2) 
+				release ();
+	}
+		
+	void grab(Rigidbody2D otherBody) {
 			joint.enabled = true;
 			joint.connectedBody = otherBody;
 			// Case of grabbing robot body
@@ -33,16 +47,12 @@ public class GrabInTrigger : MonoBehaviour {
 			}
 			anim.SetBool("grabbing", true);
 			holding = true;
-			}
+		}
 
-			if (Input.GetKeyDown (KeyCode.R) && holding) {
+	void release() {
 			joint.enabled = false;
 			anim.SetBool("grabbing", false);
 			holding = false;
-				}
 		}
-	// Update is called once per frame
-	void Update () {
-		//joint.anchor = transform.position;
-	}
+
 }

@@ -1,19 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RobotAnimations.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GrabInTrigger.cs">
     <Files>
-      <File FileName="Assets\Scripts\RobotAnimations.cs" Line="61" Column="40" />
-      <File FileName="Assets\Scripts\GrabInTrigger.cs" Line="12" Column="1" />
-      <File FileName="Assets\Scripts\XYMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\RobotAnimations.cs" Line="93" Column="1" />
+      <File FileName="Assets\Scripts\HorizontalMovement.cs" Line="14" Column="17" />
+      <File FileName="Assets\Scripts\RobotAnimations.cs" Line="81" Column="2" />
+      <File FileName="Assets\Scripts\GrabInTrigger.cs" Line="31" Column="5" />
+      <File FileName="Assets\Scripts\XYMovement.cs" Line="23" Column="3" />
       <File FileName="Assets\Scripts\DestroyByBoundary.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\HorizontalMovement.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\TruckController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GoldSpawner.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\DestroyByCollision.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GameCamera.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\goldShredder.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ReAttach.cs" Line="50" Column="14" />
+      <File FileName="Assets\Scripts\HorizontalMovementB.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ReAttach.cs" Line="77" Column="12" />
+      <File FileName="Assets\Scripts\RoboHeadMovement.cs" Line="54" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

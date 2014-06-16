@@ -2,11 +2,11 @@
 using System.Collections;
 
 public class RobotAnimations : MonoBehaviour {
+	public int player;
 	private Animator bodyAnim;
 	private Animator headAnim;
 	private CircleCollider2D circleCollider;
 	private HorizontalMovement movementScript;
-	private XYMovement headMovement;
 	public GameObject head;
 	public GameObject headParent;
 	private bool facingRight;
@@ -29,25 +29,24 @@ public class RobotAnimations : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-		handleXMovement ();
-		if (Input.GetKeyDown (KeyCode.Space) && attached) {
-			movementScript = GetComponent<HorizontalMovement>();
-			movementScript.enabled = false;
-			headMovement = head.GetComponentInParent<XYMovement>();
-			headMovement.enabled = true;
-			this.enabled = false;
-			rigidbody2D.fixedAngle = false;
-			StartCoroutine(detach());
+				handleXAnimations ();
+				if (Input.GetKeyDown (KeyCode.Space) && attached && player == 1) 
+						StartCoroutine (detach ());
+				if (Input.GetKeyDown (KeyCode.KeypadPlus) && attached && player == 2)
+						StartCoroutine (detach ());
 		}
-	}
 
 
 
 
 	//Custom Methods
 	public IEnumerator detach() {
+		// Deactivate scripts
+		GetComponent<HorizontalMovement> ().enabled = false;
+		this.enabled = false;
 		// Activate head scripts
-		headParent.GetComponent<GrabInTrigger> ().enabled = true;
+		head.GetComponentInParent<RoboHeadMovement> ().enabled = true;
+		head.GetComponent<GrabInTrigger> ().enabled = true;
 		headParent.GetComponent<ReAttach> ().enabled = true;
 		// Activate head colliders
 		headParent.GetComponent<CircleCollider2D> ().enabled = true;
@@ -63,19 +62,20 @@ public class RobotAnimations : MonoBehaviour {
 		headParent.rigidbody2D.isKinematic = false;
 		gameObject.layer = LayerMask.NameToLayer ("MovableObject");
 		gameObject.tag = "MovableObject";
+		rigidbody2D.fixedAngle = false;
 
 	}
 
-	void handleXMovement() {
+	void handleXAnimations() {
 		bodyAnim.SetFloat ("speed", Mathf.Abs(rigidbody2D.velocity.x));
-		
-		if (Input.GetKeyDown(KeyCode.D) && facingRight) {
+		if (Input.GetKeyDown(KeyCode.D) && facingRight && player == 1) 
 			flip();
-		}
-		if (Input.GetKeyDown(KeyCode.A) && !facingRight) {
+		if (Input.GetKeyDown(KeyCode.A) && !facingRight && player == 1)
 			flip ();
-		}
-
+		if (Input.GetKeyDown (KeyCode.LeftArrow) && !facingRight && player == 2)
+			flip ();
+		if (Input.GetKeyDown (KeyCode.RightArrow) && facingRight && player == 2)
+			flip ();
 	}
 
 	void flip() {
@@ -85,8 +85,5 @@ public class RobotAnimations : MonoBehaviour {
 		transform.localScale = scale;
 	}
 
-	public bool isAttached() {
-		return attached;
-	}
 	
 }
